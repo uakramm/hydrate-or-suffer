@@ -1,6 +1,12 @@
 from twilio.rest import Client
-from config import TWILIO_SID, TWILIO_AUTH_TOKEN, TWILIO_WHATSAPP_FROM, WHATSAPP_TO
+from config import (
+  TWILIO_SID,
+  TWILIO_AUTH_TOKEN,
+  TWILIO_WHATSAPP_FROM,
+  WHATSAPP_TO
+)
 from utils import get_random_insult
+
 
 def send_whatsapp_message(body):
     client = Client(TWILIO_SID, TWILIO_AUTH_TOKEN)
@@ -10,6 +16,7 @@ def send_whatsapp_message(body):
         to=WHATSAPP_TO
     )
     print(f"Sent message: {message.sid}")
+
 
 if __name__ == "__main__":
     insult = get_random_insult()
