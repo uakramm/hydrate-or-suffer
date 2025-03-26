@@ -1,3 +1,4 @@
 reminder.log
 .env
 .venv
+__pycache*
